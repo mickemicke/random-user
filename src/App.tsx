@@ -67,6 +67,7 @@ function App() {
     // men tror react batchar dom så det inte blir för många rerenders? Så detta borde vara okej ändå
     setUser(response.results[0]);
     setError({ error: false, message: "" });
+    setOpen(false);
     setLoading(false);
   };
 

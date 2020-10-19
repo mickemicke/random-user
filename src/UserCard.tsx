@@ -4,7 +4,6 @@ import {
   Card,
   CardContent,
   CardHeader,
-  IconButton,
   List,
   ListItem,
   ListItemIcon,
@@ -29,8 +28,6 @@ type Props = {
     };
   };
   className: string;
-  removeUser: (id: string) => void;
-  id: string;
 };
 
 export function formatAddress(
@@ -48,8 +45,6 @@ function UserCard({
   email,
   address,
   className,
-  id,
-  removeUser,
 }: Props) {
   const formattedAddress = formatAddress(
     address.city,
@@ -61,11 +56,6 @@ function UserCard({
       <CardHeader
         avatar={<Avatar alt={name} src={picture} />}
         title={name}
-        action={
-          <IconButton onClick={() => removeUser(id)} aria-label="settings">
-            <DeleteIcon />
-          </IconButton>
-        }
       />
       <CardContent>
         <List dense>

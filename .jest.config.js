@@ -7,4 +7,5 @@ export default {
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest",
   },
+  preset: "ts-jest",
 };

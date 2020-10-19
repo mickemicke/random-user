@@ -12,7 +12,6 @@ import {
 import PhoneIcon from "@material-ui/icons/Phone";
 import EmailIcon from "@material-ui/icons/Email";
 import HomeIcon from "@material-ui/icons/Home";
-import DeleteIcon from "@material-ui/icons/Delete";
 
 type Props = {
   picture: string;

@@ -46,7 +46,7 @@ const useStyles = makeStyles({
 
 function App() {
   const [loading, setLoading] = useState(false);
-  const [user, setUser] = useState<User | undefined>();
+  const [user, setUser] = useState<User>();
   const [open, setOpen] = React.useState(false);
   const [{ error, message }, setError] = useState({
     error: false,

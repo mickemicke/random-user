@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./App.css";
 import {
   Button,
   Container,
@@ -41,6 +40,7 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    width: "100%",
   },
 });
 
@@ -57,7 +57,6 @@ function App() {
   const getUser = async () => {
     setLoading(true);
     const response = await callApi<{ results: UserInterface[] }>(apiUrl);
-    console.log("response :>> ", response);
     if (response instanceof Error) {
       setLoading(false);
       setOpen(true);
@@ -89,7 +88,7 @@ function App() {
 
       <Paper elevation={0} className={classes.userContainer}>
         {loading && <CircularProgress size="4em" />}
-        {(user && !loading) && (
+        {user && !loading && (
           <UserCard
             className={classes.userContainer}
             name={`${user.name.first} ${user.name.last}`}

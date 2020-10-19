@@ -11,7 +11,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import MuiAlert, { AlertProps } from "@material-ui/lab/Alert";
 import callApi from "./callApi";
 import UserCard from "./UserCard";
-import { User } from "./UserInterface";
+import { UserInterface } from "./UserInterface";
 
 const apiUrl = "https://randomuser.me/api/";
 
@@ -46,7 +46,7 @@ const useStyles = makeStyles({
 
 function App() {
   const [loading, setLoading] = useState(false);
-  const [user, setUser] = useState<User>();
+  const [user, setUser] = useState<UserInterface>();
   const [open, setOpen] = React.useState(false);
   const [{ error, message }, setError] = useState({
     error: false,
@@ -56,7 +56,7 @@ function App() {
 
   const getUser = async () => {
     setLoading(true);
-    const response = await callApi<{ results: User[] }>(apiUrl);
+    const response = await callApi<{ results: UserInterface[] }>(apiUrl);
     console.log("response :>> ", response);
     if (response instanceof Error) {
       setLoading(false);

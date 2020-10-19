@@ -1,4 +1,6 @@
-export interface User {
+// eller då det lite längre naming convention av nameInterface
+// är väl bara en praxis att komma överens över
+export interface UserInterface {
   name: {
     [key: string]: string;
   };

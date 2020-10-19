@@ -53,6 +53,7 @@ function App() {
     // men tror react batchar dom så det inte blir för många rerenders? Så detta borde vara okej ändå
     setUsers([...users, ...response.results]);
     setError({ error: false, message: "" });
+    setOpen(false);
     setLoading(false);
   };
   const removeUser = (id: string) =>
